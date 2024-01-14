@@ -1,25 +1,9 @@
 "use client";
+import { logos } from "@/data/clientCrousal";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
-// Define a type for each logo
-type Logo = {
-  src: string;
-  alt: string;
-};
 
-// Array of logos with stronger typing
-const logos: Logo[] = [
-  { src: "/public/dummy.svg", alt: "Facebook" },
-  { src: "/public/dummy.svg", alt: "Disney" },
-  { src: "/public/dummy.svg", alt: "Facebook" },
-  { src: "/public/dummy.svg", alt: "Disney" },
-  { src: "/public/dummy.svg", alt: "Facebook" },
-  { src: "/public/dummy.svg", alt: "Disney" },
-  { src: "/public/dummy.svg", alt: "Facebook" },
-  { src: "/public/dummy.svg", alt: "Disney" },
-  // Add more logos here
-];
 
 const LogoCarousel: React.FC = () => {
   const logosRef = useRef<HTMLUListElement>(null);
@@ -34,12 +18,7 @@ const LogoCarousel: React.FC = () => {
   }, []);
 
   return (
-   
-    <div
-      className="w-full inline-flex flex-nowrap overflow-hidden bg-[#00388B] py-24"
-     
-    >
-
+    <div className="w-full inline-flex flex-nowrap overflow-hidden bg-[#00388B] py-24 mb-28">
       <ul
         ref={logosRef}
         className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
@@ -58,7 +37,6 @@ const LogoCarousel: React.FC = () => {
         ))}
       </ul>
     </div>
-
   );
 };
 
