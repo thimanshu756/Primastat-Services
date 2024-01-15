@@ -7,6 +7,7 @@ interface ServiceDetailsProps {
   imageAlt: string;
   title: string;
   description: string;
+  
   features: Array<{
     icon: string;
     text: string;
@@ -20,6 +21,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
   title,
   description,
   features,
+   
 }) => {
   const textSection = (
     <div className="w-[100vw] md:w-[50vw] h-full flex justify-center items-start py-4 md:py-4 md:p-0">
@@ -78,6 +80,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
 
   return (
     <div
+
       className={`flex flex-col md:flex-row bg-white py-16 ${
         shouldRight ? "md:flex-row-reverse" : ""
       }`}

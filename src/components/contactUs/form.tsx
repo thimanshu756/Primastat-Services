@@ -1,4 +1,5 @@
-import React, { useState, ChangeEvent  } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
+import axios from "axios";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -11,14 +12,87 @@ export default function ContactForm() {
     message: "",
   });
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const [errors, setErrors] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    company: "",
+    phone: "",
+    reason: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const validateForm = () => {
+    const newErrors = { ...errors };
+
+    if (formData.firstName.trim() === "") {
+      newErrors.firstName = "First Name is required.";
+    } else {
+      newErrors.firstName = "";
+    }
+
+    if (formData.lastName.trim() === "") {
+      newErrors.lastName = "Last Name is required.";
+    } else {
+      newErrors.lastName = "";
+    }
+
+    if (formData.email.trim() === "") {
+      newErrors.email = "Email is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Invalid email address.";
+    } else {
+      newErrors.email = "";
+    }
+
+    if (formData.phone.trim() === "") {
+      newErrors.phone = "Phone Number is required.";
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Invalid phone number (10 digits).";
+    } else {
+      newErrors.phone = "";
+    }
+
+    if (formData.reason.trim() === "") {
+      newErrors.reason = "Reason of Contact is required.";
+    } else {
+      newErrors.reason = "";
+    }
+
+    setErrors(newErrors);
+    return Object.values(newErrors).every((error) => error === "");
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission logic here, like sending data to an API
-    console.log(formData);
+    if (validateForm()) {
+      try {
+        console.log("formData ->", formData);
+        debugger;
+        await axios.post("YOUR_API_ENDPOINT_HERE", formData);
+        // Clear the form data upon successful submission
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          company: "",
+          phone: "",
+          reason: "",
+          message: "",
+        });
+        // Optionally, display a success message to the user
+      } catch (error) {
+        // Handle API errors here
+        console.error("API error:", error);
+        // Optionally, display an error message to the user
+      }
+    }
   };
 
   return (
@@ -37,8 +111,8 @@ export default function ContactForm() {
             placeholder="First Name"
             className="border border-gray-300 p-2 rounded-md w-[100%]"
           />
+          <div className="error-message">{errors.lastName}</div>
         </span>
-
         <span className="flex-1">
           <p className="my-2">Last Name</p>
           <input
@@ -49,8 +123,10 @@ export default function ContactForm() {
             placeholder="Last Name"
             className="border border-gray-300 p-2 rounded-md w-[100%]"
           />
+          <div className="error-message">{errors.lastName}</div>
         </span>
       </div>
+
       <div className="flex flex-col md:flex-row md:space-x-4">
         <span className="flex-1">
           <p className="my-2">Email</p>
@@ -63,8 +139,8 @@ export default function ContactForm() {
             required
             className="border border-gray-300 p-2 rounded-md w-[100%]"
           />
+          <div className="error-message">{errors.email}</div>
         </span>
-
         <span className="flex-1">
           <p className="my-2">Company</p>
           <input
@@ -73,7 +149,6 @@ export default function ContactForm() {
             value={formData.company}
             onChange={handleChange}
             placeholder="Your Company Name*"
-            required
             className="border border-gray-300 p-2 rounded-md w-[100%]"
           />
         </span>
@@ -87,28 +162,29 @@ export default function ContactForm() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            placeholder="Your Email Address*"
+            placeholder="Your Phone Number*"
             required
             className="border border-gray-300 p-2 rounded-md w-[100%]"
           />
+          <div className="error-message">{errors.phone}</div>
         </span>
-
         <span className="flex-1">
           <p className="my-2">Reason of Contact*</p>
           <input
-            type="reason"
-            name="company"
+            type="text"
+            name="reason"
             value={formData.reason}
             onChange={handleChange}
             placeholder="Reason of Contact*"
             required
             className="border border-gray-300 p-2 rounded-md w-[100%]"
           />
+          <div className="error-message">{errors.reason}</div>
         </span>
       </div>
 
       <div className="flex flex-col md:flex-row md:space-x-4">
-        <span className="w-[100%] ">
+        <span className="w-[100%]">
           <p className="my-2">Your Message</p>
           <textarea
             name="message"

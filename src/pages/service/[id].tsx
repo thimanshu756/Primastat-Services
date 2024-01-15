@@ -34,7 +34,9 @@ const Landing: React.FC<LandingProps> = ({ serviceData }) => {
 
       {serviceData.serviceDetails.map((currentDetails, index) => {
         return (
+<span  key={ currentDetails.serviceId}>
           <ServiceDetails
+        
             imageSrc={currentDetails.image}
             imageAlt={currentDetails.heading}
             title={currentDetails.heading}
@@ -42,6 +44,7 @@ const Landing: React.FC<LandingProps> = ({ serviceData }) => {
             features={currentDetails.details}
             shouldRight={index % 2 !== 0}
           />
+</span>
         );
       })}
 

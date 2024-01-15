@@ -6,6 +6,7 @@ export interface ServiceDetail {
     icon: string;
     text: string;
   }>;
+  serviceId: string;
 }
 
 export interface ServiceData {
@@ -154,4 +155,6 @@ const machineLearning = {
     },
   ],
 };
-export default [bigData, dataVisualization, machineLearning];
+
+const serviceList =[bigData, dataVisualization, machineLearning];
+export default serviceList ;
