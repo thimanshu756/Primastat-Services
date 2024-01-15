@@ -17,7 +17,7 @@ export const Landing = (): JSX.Element => {
       <Navbar />
 
       <Hero />
-      {/* <Animation/> */}
+      <Animation/>
       <CaseStudies caseStudiesList={caseStudiesList}/>
       <Client clientList={clientList} />
 

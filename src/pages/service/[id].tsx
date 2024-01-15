@@ -48,7 +48,7 @@ const Landing: React.FC<LandingProps> = ({ serviceData }) => {
         );
       })}
 
-      {/* <Animation/> */}
+
       <CaseStudies caseStudiesList={caseStudiesList} />
       <Client clientList={clientList} />
       <Footer />
