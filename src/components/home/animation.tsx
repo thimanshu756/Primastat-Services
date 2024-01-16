@@ -15,22 +15,40 @@ export default function Animation() {
   };
 
   const getCardClassName = (index: number): string => {
-    return `card ${hovered === index ? "hovered" : ""}`;
+
+    let bgColorClass;
+    
+    switch (index) {
+      case 0:
+        bgColorClass = "bg-[#272339]";
+        break;
+      case 1:
+        bgColorClass = "bg-[#273177]";
+        break;
+      case 2:
+        bgColorClass = "bg-[#273177]";
+        break;
+      default:
+        bgColorClass = ""; // default background color class if needed
+    }
+    return `card ${hovered === index ? "hovered" : ""} ${bgColorClass}`;
   };
+
 
   const getTextClassName = (index: number): string => {
     return `text-details ${hovered === index ? "hovered" : ""}`;
   };
   return (
-    <div className="relative w-full h-[600px] bg-[#262338] border border-solid border-black">
+    <div className="relative w-full h-[600px] border border-solid border-black">
       <div className="flex justify-between mx-auto max-w-[1444px] h-[600px]">
         {/* Data Visualization */}
         <div
           className={getCardClassName(0)}
           onMouseEnter={() => handleMouseEnter(0)}
           onMouseLeave={handleMouseLeave}
+  
         >
-          <div className="w-[280px] h-[280px] mt-20 flex justify-start items-center">
+          <div className="w-[280px]  h-[280px] mt-20 flex justify-start items-center">
             <Image
               height={200}
               width={200}

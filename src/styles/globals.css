@@ -2,33 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Animation.css */
-.card {
+/* Animation.css */.card {
   width: 33.3%;
   height: 480px;
   opacity: 1;
-  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s; /* Add opacity transition */
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s, filter 0.3s ease-in-out;
+  filter: blur(0);
 }
-
 
 .card.hovered {
   width: 66.6%;
-  opacity: 0.8; /* Adjust opacity for a smoother effect */
+  opacity: 0.8;
+  filter: blur(0px); /* No blur when hovered */
 }
 
+.card:not(.hovered) {
+  filter: blur(2px); /* Apply blur to non-hovered cards */
+}
 
-
-.text-details{
+.text-details {
   display: none;
-}
-
-.text-details.hovered {
-  display: block;
-
   color: #fff;
   font-size: 0.875rem;
   font-weight: 400;
   text-align: left;
   margin-top: 0.5rem;
+}
 
+.text-details.hovered {
+  display: block;
 }
