@@ -54,7 +54,7 @@ export default function Animation() {
 
   return (
     <div className="relative w-full animation-container">
-      <div className="flex justify-between">
+      <div className="flex flex-col md:flex-row md:justify-between ">
         {cardData.map((data) => (
           <Card
             key={data.index}

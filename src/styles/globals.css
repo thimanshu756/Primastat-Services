@@ -33,3 +33,21 @@
 .text-details.hovered {
   display: block;
 }
+
+
+@media (max-width: 768px) {
+  .animation-container {
+    /* Ensure a single column layout */
+  }
+
+  .card {
+    width: 100%; /* Full width for each card */
+    height: auto; /* Height adjusts to content */
+    filter: none; /* No blur effect */
+    transition: none; /* Disable transitions */
+  }
+
+  .text-details {
+    display: block; /* Always show text details */
+  }
+}
