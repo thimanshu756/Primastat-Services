@@ -10,7 +10,7 @@ const ClientTestimonial: React.FC<clientDetails> = ({
   location
 }) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-start space-y-4 hover:shadow-lg transition-shadow duration-300">
+    <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-start space-y-4 hover:shadow-lg transition-shadow duration-300 md:w-[15vw] w-[100%]">
    <div className="h-16 w-24 flex justify-start overflow-hidden">
   <Image
     src={imgLink}

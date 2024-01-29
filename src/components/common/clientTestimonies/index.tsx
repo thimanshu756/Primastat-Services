@@ -10,15 +10,14 @@ interface ClientProps {
 const Client: React.FC<ClientProps> = ({ clientList }) => {
   const getGridClass = () => {
     const listLength = clientList.length;
-    if (listLength>2) {
-      return 'md:grid-cols-3';
-    } else if (listLength>1) {
-      return 'md:grid-cols-2';
+    if (listLength > 2) {
+      return 'md:grid-cols-3 md:w-[47vw]';
+    } else if (listLength > 1) {
+      return 'md:grid-cols-2 md:w-[32vw]';
     } else {
-      return 'md:grid-cols-1';
+      return 'md:grid-cols-1 md:w-[17vw';
     }
   };
-
   return (
     <div className="bg-[#00388B] mx-auto p-4 text-white">
       <div className="text-center text-2xl font-semibold py-12 pb-20">
@@ -26,7 +25,7 @@ const Client: React.FC<ClientProps> = ({ clientList }) => {
       </div>
 
       <div className="flex items-center justify-center">
-        <div className={`grid grid-cols-1 ${getGridClass()} gap-8 mb-8 md:w-[70vw] md:pb-28`}>
+      <div className={`grid grid-cols-1 gap-2 md:gap-2vw ${getGridClass()} mb-8  md:pb-28`}>
           {clientList.map((client, index) => (
             <div key={index} className="flex justify-center">
               <ClientTestimonial {...client} />
