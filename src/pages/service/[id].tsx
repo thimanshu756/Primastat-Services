@@ -34,20 +34,18 @@ const Landing: React.FC<LandingProps> = ({ serviceData }) => {
 
       {serviceData.serviceDetails.map((currentDetails, index) => {
         return (
-<span  key={ currentDetails.serviceId}>
-          <ServiceDetails
-        
-            imageSrc={currentDetails.image}
-            imageAlt={currentDetails.heading}
-            title={currentDetails.heading}
-            description={currentDetails.description}
-            features={currentDetails.details}
-            shouldRight={index % 2 !== 0}
-          />
-</span>
+          <span key={currentDetails.serviceId}>
+            <ServiceDetails
+              imageSrc={currentDetails.image}
+              imageAlt={currentDetails.heading}
+              title={currentDetails.heading}
+              description={currentDetails.description}
+              features={currentDetails.details}
+              shouldRight={index % 2 !== 0}
+            />
+          </span>
         );
       })}
-
 
       <CaseStudies caseStudiesList={caseStudiesList} />
       <Client clientList={clientList} />
@@ -60,7 +58,7 @@ export const getServerSideProps: GetServerSideProps = async (
   context: GetServerSidePropsContext
 ) => {
   // Check if 'id' exists and is a string
-  if (!context.params || typeof context.params.id !== 'string') {
+  if (!context.params || typeof context.params.id !== "string") {
     return {
       notFound: true,
     };
@@ -82,6 +80,5 @@ export const getServerSideProps: GetServerSideProps = async (
     },
   };
 };
-
 
 export default Landing;
