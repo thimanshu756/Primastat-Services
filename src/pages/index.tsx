@@ -13,7 +13,7 @@ import { caseStudiesList } from "@/data/caseStudiesList";
 
 export const Landing = (): JSX.Element => {
   return (
-    <div className="h-100vh w-100vw bg-[#F2F2F2]">
+    <div className="h-100vh w-100vw overflow-hidden bg-[#F2F2F2]">
       <Navbar />
 
       <Hero />

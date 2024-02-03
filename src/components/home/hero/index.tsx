@@ -7,7 +7,7 @@ import AboutSection from "./aboutSection";
 const Hero = () => {
   return (
     <div className="bg-white bg-[#f5f5f5] text-black font-['Roboto', 'Helvetica']">
-      <div className="text-black md:px-[7vw] py-[5vh] md:py-[8vh]">
+      <div className="text-black md:mb-[10vh] md:px-[7vw] py-[5vh] md:py-[8vh]">
         <div className="mx-auto">
           <div className="flex flex-col md:flex-row items-center">
             <HeroText />

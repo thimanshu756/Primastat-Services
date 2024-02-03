@@ -101,7 +101,7 @@ export default function Footer() {
               <Link href="/privacy">
                 <p className="text-gray-700 text-lg">Privacy Policy</p>
               </Link>
-              t
+              
             </div>
           </div>
         </div>
