@@ -1,4 +1,5 @@
-import Image from "next/image";
+import React from "react";
+
 type CardData = {
   index: number;
   title: string;
@@ -22,28 +23,19 @@ const Card: React.FC<CardProps> = ({
 }) => {
   const { index, title, imageSrc, description } = data;
 
+
   const getCardClassName = (): string => {
-    let bgColorClass;
-    switch (index) {
-      case 0:
-        bgColorClass = "bg-[#272339]";
-        break;
-      case 1:
-        bgColorClass = "bg-[#273177]";
-        break;
-      case 2:
-        bgColorClass = "bg-[#00061d]";
-        break;
-      default:
-        bgColorClass = "";
-    }
-    return `card p-4 flex flex-col justify-center items-start ${
+    
+    return `card relative overflow-hidden p-4 flex w-full flex-col justify-between items-start text-white ${
       hovered === index ? "hovered" : ""
-    } ${bgColorClass}`;
+    } }`;
   };
 
-  const getTextClassName = (): string => {
-    return `text-details mt-4 ${hovered === index ? "hovered" : ""}`;
+  // Background image style
+  const backgroundImageStyle = {
+    backgroundImage: `url(${imageSrc})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
   };
 
   return (
@@ -51,16 +43,14 @@ const Card: React.FC<CardProps> = ({
       className={getCardClassName()}
       onMouseEnter={() => handleMouseEnter(index)}
       onMouseLeave={handleMouseLeave}
+      style={backgroundImageStyle} // Apply background image here
     >
-      <div className="text-white text-3xl font-semibold text-left mb-4">
+      <div className="text-3xl font-semibold text-left mb-4 z-10 p-8">
         {title}
       </div>
-      <div className="h-[50%] flex justify-center items-center">
-        <Image height={250} width={250} alt={title} src={imageSrc} />
-      </div>
-      <p className={getTextClassName()}>{description}</p>
+      <p className={"mt-4 p-8 text-left mb-12 text-xl " }>{description}</p>
     </button>
   );
 };
 
-export default Card
+export default Card;

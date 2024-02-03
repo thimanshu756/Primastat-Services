@@ -22,25 +22,22 @@ export default function Animation() {
     {
       index: 0,
       title: "Data Visualization",
-      imageSrc:
-        "https://c.animaapp.com/MXeDvc3F/img/-9d6d9e55-709a-4703-b411-51bd0c201705-1-1.svg",
+      imageSrc: `/public/services/home-animation/data-visualization.png`,
       description:
-        "We turn data into your strategic ally, unlocking insights that drive growth and informed decision-making for maximum impact.",
+        "We help you unlock insights that drive growth and enhance decision-making",
     },
     {
       index: 1,
       title: "Big Data",
-      imageSrc: "https://c.animaapp.com/MXeDvc3F/img/etl-1.svg",
-      description:
-        "From efficient warehousing to powerful analytics, we turn big data challenges into opportunities, driving smarter decisions for your business success.",
+      imageSrc: `/public/services/home-animation/big-data.png`,
+      description: "Organize, manage and transform your data",
     },
     {
       index: 2,
+
       title: "Machine Learning",
-      imageSrc:
-        "https://c.animaapp.com/MXeDvc3F/img/ai-brain-learning-scaled-e1689603131824-1.svg",
-      description:
-        "From end-to-end model management to powerful inference, we bring AI solutions that propel your success through data-driven insights and innovation.",
+      imageSrc: `/public/services/home-animation/machine-learning.png`,
+      description: "Tailored ML solutions for exponential growth",
     },
   ];
 
@@ -53,8 +50,8 @@ export default function Animation() {
   };
 
   return (
-    <div className="relative w-full animation-container">
-      <div className="flex flex-col md:flex-row md:justify-between ">
+    <div className="relative w-full animation-container mb-[10vh] md:mb-[40vh]">
+      <div className="flex flex-col md:flex-row md:justify-between  bg-black">
         {cardData.map((data) => (
           <Card
             key={data.index}
