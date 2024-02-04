@@ -66,7 +66,7 @@ const AboutSection = () => {
       <div ref={sectionRef} className="md:w-[50vw] flex flex-col items-center justify-center opacity-0">
         <div className="text-center text-2xl font-semibold">About PrimaStat</div>
         <div className="text-center text-lg my-8">
-          At Primastat, we are dedicated to helping you harness the knowledge embedded in your data. Our tailored solutions in Data Visualization, Big Data Management, and Machine Learning empower businesses to make informed decisions and drive success.
+          At Primastat, we are dedicated to helping you harness the knowledge embedded in your data. Our tailored solutions in <strong> Data Visualization</strong>, <strong> Big Data Management</strong>, and<strong>  Machine Learning</strong> empower businesses to make informed decisions and drive success.
         </div>
         <Link href="/aboutUs">
         <button  className="p-2 rounded-full text-white bg-black rounded-[16px] pl-4 pr-4 border hover:border-white hover:bg-black hover:text-white transition duration-300 ease-in-out">
