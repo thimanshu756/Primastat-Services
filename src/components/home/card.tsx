@@ -40,6 +40,10 @@ const Card: React.FC<CardProps> = ({
     backgroundPosition: "center",
   };
 
+  const getTextClassName = (): string => {
+    return `text-details mt-4 p-8 text-left mb-12 text-6xl  ${hovered === index ? "hovered" : ""}`;
+  };
+
   return (
     <Link   className={getCardClassName()}
     onMouseEnter={() => handleMouseEnter(index)}
@@ -47,10 +51,10 @@ const Card: React.FC<CardProps> = ({
     style={backgroundImageStyle} // Apply background image here
      key={data.index} href={`${data.route}`}>
   
-      <div className="text-3xl font-semibold text-left mb-4 z-10 p-8">
+      <div className="text-4xl font-semibold text-left mb-4 z-10 p-8">
         {title}
       </div>
-      <p className={"mt-4 p-8 text-left mb-12 text-xl " }>{description}</p>
+      <p className={getTextClassName()} >{description}</p>
 
     </Link>
   );
