@@ -24,12 +24,12 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
    
 }) => {
   const textSection = (
-    <div className="w-[100vw] md:w-[60vw] h-full flex justify-center items-start py-4 md:py-4 md:p-0">
-      <div className="w-[90%] md:w-[70%]">
+    <div className="w-[100vw] md:w-[65vw] h-full flex justify-center items-start ">
+      <div className="w-[90%] md:w-[55%] ">
         <p className="text-blue-900 font-sans text-2xl font-extrabold leading-normal">
           {title}
         </p>
-        <p className="text-black font-sans text-xl font-medium leading-normal">
+        <p className="text-black font-sans text-md font-medium leading-normal">
           {description}
         </p>
 
@@ -52,7 +52,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
           ) : (
             <p
               key={index}
-              className="mt-4 text-center bg-[#00114d] rounded-[14px] px-3 py-2 text-white text-[20px]"
+              className="mt-4 text-center bg-[#00114d] rounded-[14px] px-3 py-2 text-white text-[18px] "
             >
               {feature.text}
             </p>
@@ -63,11 +63,11 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
   );
 
   const imageSection = (
-    <div className="w-[100vw] md:w-[40vw] h-full">
+    <div className="w-[100vw] md:w-[35vw] h-full">
       <Image
         src={imageSrc}
         alt={imageAlt}
-        className={`w-full h-[55vh] object-cover rounded-3xl ${
+        className={`w-full h-[50vh] object-cover rounded-3xl ${
           shouldRight
             ? "md:rounded-l-2xl md:rounded-r-none"
             : "md:rounded-r-2xl md:rounded-l-none"

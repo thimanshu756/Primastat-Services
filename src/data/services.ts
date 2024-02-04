@@ -21,7 +21,7 @@ export interface ServiceData {
 
 const bigData = {
   serviceId: "bigData",
-  breadCrumbsText: "Home > Services > Big Data",
+  breadCrumbsText: "Home \u25B6 Services \u25B6  Big Data \u25BD ",
   heroText: "Architect, Implement, Govern: Transform Your Data Landscape",
   heroImage: "/public/services/bitData/hero.jpeg",
 buttonClass:"bg-stone-500 border-white text-white hover:border hover:border-stone-500  hover:bg-white hover:text-stone-500 transition duration-300 ease-in-out",
@@ -57,7 +57,7 @@ buttonClass:"bg-stone-500 border-white text-white hover:border hover:border-ston
 
 const dataVisualization = {
   serviceId: "dataVisualization",
-  breadCrumbsText: "Home > Services > Data Visualization",
+  breadCrumbsText: "Home \u25B6  Services \u25B6  Data Visualization \u25BD ",
   heroText: "Visualize Insights, Empower Decisions: Uncover the Power of Data",
   heroImage: "/public/services/dataVisualization/hero.png",
 
@@ -111,7 +111,7 @@ const dataVisualization = {
 
 const machineLearning = {
   serviceId: "machineLearning",
-  breadCrumbsText: "Home > Services > Machine Learning",
+  breadCrumbsText: "Home \u25B6  Services \u25B6  Machine Learning \u25BD ",
   heroText: "Build, Deploy, Manage your Machine Learning Workflows",
   heroImage: "/public/services/machineLearning/hero.jpeg",
 
