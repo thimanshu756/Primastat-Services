@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({ imageUrl, titleText,  }) => {
           </div>
           <Link href="/contactUs">
             <button
-              className={`p-2 rounded-full  border-orange-600   border  mt-4 md:mt-6 px-4 bg-orange-600 border-white text-white hover:border hover:border-orange-600 hover:bg-white hover:text-orange-600 transition duration-300 ease-in-out `}
+              className={`p-2 rounded-full  border-orange-600   border  mt-4 md:mt-6 px-4 bg-orange-600 text-white hover:border hover:border-orange-600 hover:bg-white hover:text-orange-600 transition duration-300 ease-in-out `}
             >
               Get in touch
             </button>

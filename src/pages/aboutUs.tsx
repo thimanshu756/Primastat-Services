@@ -17,7 +17,7 @@ export const Landing = (): JSX.Element => {
       <Navbar />
       <BreadCrumbs
         backgroundColor="bg-[#F2F2F2]"
-        text="Home > About Primastat"
+        text={`Home \u25B6 About Primastat`}
       />
       <Hero />
       <LogoCarousel logos={logos} color="#00388B" />
