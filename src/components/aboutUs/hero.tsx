@@ -15,7 +15,7 @@ export default function Hero() {
             growth
           </div>
           <Link href="/contactUs">
-            <button className="p-2 rounded-full text-white bg-[#00114d] rounded-[16px] pl-4 pr-4 ml-6">
+            <button className="p-2 rounded-full hover:border hover:border-[#00114d]  hover:bg-white hover:text-[#00114d] transition duration-300 ease-in-out  text-white bg-[#00114d] rounded-[16px] pl-4 pr-4 ml-6">
               Get in touch
             </button>
           </Link>

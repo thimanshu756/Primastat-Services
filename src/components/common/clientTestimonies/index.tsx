@@ -42,7 +42,7 @@ const Client: React.FC<ClientProps> = ({ clientList }) => {
       </div>
       <div className="flex justify-center my-8">
       <Link href="/contactUs">
-        <div className="bg-[#f2f2f2] p-2 rounded-full text-black text-center px-4">
+        <div className="bg-white p-2 rounded-full text-black text-center px-4 border border-black hover:border-white  hover:bg-black hover:text-white transition duration-300 ease-in-out">
 Get in touch
 </div>
 </Link>

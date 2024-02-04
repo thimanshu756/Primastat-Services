@@ -130,7 +130,7 @@ const Navbar: FC = () => {
 
             <div className="hidden md:block">
               <Link href="/contactUs">
-                <p className="p-2 rounded-full text-white bg-[#00114d] rounded-[16px] pl-4 pr-4 ml-6">
+                <p className="p-2 rounded-full text-white bg-[#00114d] rounded-[16px] pl-4 pr-4 ml-6 border  hover:border-[#00114d]  hover:bg-white hover:text-[#00114d] transition duration-300 ease-in-out">
                   Get in touch
                 </p>
               </Link>

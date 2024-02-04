@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({ imageUrl, titleText, buttonClasses }) => {
             {titleText}
           </div>
           <Link href="/contactUs">
-            <button className={`p-2 rounded-full  border  mt-4 md:mt-6 px-4 ${buttonClasses}`}>
+            <button className={`p-2 rounded-full    border  mt-4 md:mt-6 px-4 ${buttonClasses} `}>
               Get in touch
             </button>
           </Link>

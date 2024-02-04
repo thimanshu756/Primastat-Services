@@ -24,8 +24,8 @@ const bigData = {
   breadCrumbsText: "Home > Services > Big Data",
   heroText: "Architect, Implement, Govern: Transform Your Data Landscape",
   heroImage: "/public/services/bitData/hero.jpeg",
+buttonClass:"bg-stone-500 border-white text-white hover:border hover:border-stone-500  hover:bg-white hover:text-stone-500 transition duration-300 ease-in-out",
 
-  buttonClass: "border-white text-white bg-white bg-opacity-40",
   serviceDetails: [
     {
       image: "/public/services/bitData/img1.png",
@@ -61,7 +61,9 @@ const dataVisualization = {
   heroText: "Visualize Insights, Empower Decisions: Uncover the Power of Data",
   heroImage: "/public/services/dataVisualization/hero.png",
 
-  buttonClass: "border-white text-white bg-orange-900 bg-opacity-40",
+
+  buttonClass:"bg-orange-600 border-white text-white hover:border hover:border-orange-600 hover:bg-white hover:text-orange-600 transition duration-300 ease-in-out",
+
   serviceDetails: [
     {
       image: "/public/services/dataVisualization/img1.png",
@@ -113,7 +115,8 @@ const machineLearning = {
   heroText: "Build, Deploy, Manage your Machine Learning Workflows",
   heroImage: "/public/services/machineLearning/hero.jpeg",
 
-  buttonClass: "border-white text-white bg-orange-900 ",
+  buttonClass:"bg-orange-600 border-white text-white hover:border hover:border-orange-600 hover:bg-white hover:text-orange-600 transition duration-300 ease-in-out",
+
   serviceDetails: [
     {
       image: "/public/services/machineLearning/img1.jpeg",

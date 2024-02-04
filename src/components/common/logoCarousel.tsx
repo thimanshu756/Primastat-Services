@@ -1,5 +1,4 @@
 "use client";
-import { logos } from "@/data/clientCarousal";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
