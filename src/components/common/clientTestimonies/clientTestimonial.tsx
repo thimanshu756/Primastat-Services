@@ -11,7 +11,7 @@ const ClientTestimonial: React.FC<clientDetails> = ({
 }) => {
   return (
     // Add the 'group' class to the parent div
-    <div className="group bg-white p-6 rounded-3xl shadow-custom duration-500 transform hover:scale-105 hover:shadow-custom-hover origin-bottom-left flex flex-col items-start md:min-h-[65vh] w-full cursor-pointer">
+    <div className="group bg-white p-6 rounded-3xl shadow-custom duration-500 transform hover:scale-105 hover:shadow-custom-hover origin-bottom-left flex flex-col items-start md:min-h-[65vh] w-full">
       <div className="h-[20%]">
         <div className="h-16  flex justify-start overflow-hidden">
           {/* Use group-hover:scale-105 to apply the scale transformation when the parent is hovered */}

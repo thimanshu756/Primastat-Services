@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 
 const AboutSection = () => {
@@ -86,9 +87,13 @@ const AboutSection = () => {
           Big Data Management, and Machine Learning empower businesses to make
           informed decisions and drive success.
         </div>
-        <button className="p-2 rounded-full text-white bg-black rounded-[16px] pl-4 pr-4">
+        <Link href="/aboutUs">
+        <button className="p-2 rounded-full text-white bg-black rounded-[16px] pl-4 pr-4  border  hover:border-white  hover:bg-black hover:text-white transition duration-300 ease-in-out">
+
+       
           About Us
         </button>
+        </Link>
       </div>
     </div>
   );

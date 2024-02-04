@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 type CardData = {
@@ -5,6 +6,7 @@ type CardData = {
   title: string;
   imageSrc: string;
   description: string;
+  route:String;
 };
 
 type HoverState = number | null;
@@ -39,17 +41,18 @@ const Card: React.FC<CardProps> = ({
   };
 
   return (
-    <button
-      className={getCardClassName()}
-      onMouseEnter={() => handleMouseEnter(index)}
-      onMouseLeave={handleMouseLeave}
-      style={backgroundImageStyle} // Apply background image here
-    >
+    <Link   className={getCardClassName()}
+    onMouseEnter={() => handleMouseEnter(index)}
+    onMouseLeave={handleMouseLeave}
+    style={backgroundImageStyle} // Apply background image here
+     key={data.index} href={`${data.route}`}>
+  
       <div className="text-3xl font-semibold text-left mb-4 z-10 p-8">
         {title}
       </div>
       <p className={"mt-4 p-8 text-left mb-12 text-xl " }>{description}</p>
-    </button>
+
+    </Link>
   );
 };
 
