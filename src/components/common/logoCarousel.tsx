@@ -1,11 +1,21 @@
 "use client";
-import { logos } from "@/data/clientCrousal";
+import { logos } from "@/data/clientCarousal";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
+// Define the Logo type
+export type Logo = {
+  src: string;
+  alt: string;
+};
 
+// Define the props for LogoCarousel component
+export interface LogoCarouselProps {
+  logos: Logo[];
+  color?: string;
+}
 
-const LogoCarousel: React.FC = () => {
+const LogoCarousel: React.FC<LogoCarouselProps> = ({ logos, color }) => {
   const logosRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
@@ -18,14 +28,34 @@ const LogoCarousel: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full inline-flex flex-nowrap overflow-hidden bg-[#00388B] py-24 mb-28">
+    <div
+      className={`w-full inline-flex flex-nowrap overflow-hidden ${
+        color ? `bg-[${color}]` : "bg-white"
+      } py-16 `}
+    >
       <ul
         ref={logosRef}
-        className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+        className="flex items-center justify-center md:justify-end [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
       >
         {logos.map((logo, index) => (
           <li key={index}>
-            <Image
+            {/* <Image
+              src={logo.src}
+              alt={logo.alt}
+             
+
+              layout="responsive" // Ensures the image scales properly
+              // Fixed height; the width will be automatically determined
+              width={75}
+              height={25}// This is a placeholder, adjust to maintain the aspect ratio if needed
+              priority
+              // className="h-24 object-contain rounded-8" 
+              
+           
+              className="rounded-8"// 'h-12' sets a fixed height; 'object-contain' maintains the aspect ratio
+         
+            /> */}
+ <Image
               src={logo.src}
               alt={logo.alt}
               width={75}

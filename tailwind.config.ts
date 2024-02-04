@@ -10,6 +10,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        custom: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+        'custom-hover': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+      },
+      transitionProperty: {
+        'scale-shadow': 'transform, box-shadow',
+      },
+      transformOrigin: {
+        'bottom-left': 'bottom left',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -27,6 +37,7 @@ const config: Config = {
            fadeInRight: 'fadeInRight 0.5s ease-in-out forwards',
       },
       keyframes: {
+
         'infinite-scroll': {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-100%)' },

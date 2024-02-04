@@ -9,6 +9,7 @@ import LogoCarousel from "../components/common/logoCarousel";
 import { clientList } from "@/data/clientTestimonies";
 import { caseStudiesList } from "@/data/caseStudiesList";
 import BreadCrumbs from "@/components/common/breadCrumbs";
+import { logos } from "@/data/clientCarousal";
 
 export const Landing = (): JSX.Element => {
   return (
@@ -19,7 +20,8 @@ export const Landing = (): JSX.Element => {
         text="Home > About Primastat"
       />
       <Hero />
-      <LogoCarousel />
+      <LogoCarousel logos={logos} color="#00388B" />
+      <div className="my-24 bg-white"/>
       <CaseStudies caseStudiesList={caseStudiesList} />
       <Client clientList={clientList} />
 
