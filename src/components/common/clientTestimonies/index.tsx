@@ -27,7 +27,7 @@ const Client: React.FC<ClientProps> = ({ clientList }) => {
         </div>
       </div>
 
-      <div className="text-center text-3xl font-semibold text-[#f34a4a]">
+      <div className="text-center text-3xl pt-8 font-semibold text-[#f34a4a]">
         Let’s work together!
       </div>
       <div className="text-center text-5xl font-semibold my-12">
