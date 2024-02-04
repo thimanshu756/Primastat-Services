@@ -51,3 +51,8 @@
     display: block; /* Always show text details */
   }
 }
+
+.heading-1{
+  font-size:20px;
+  color:red
+}

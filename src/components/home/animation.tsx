@@ -40,7 +40,7 @@ export default function Animation() {
       index: 2,
 
       title: "Machine Learning",
-      imageSrc: `/public/services/home-animation/machine-learning.png`,
+      imageSrc: `/public/services/home-animation/machine-learning.svg`,
       description: "Tailored ML solutions for exponential growth",
       route: "/service/machineLearning"
     },
