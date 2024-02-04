@@ -4,6 +4,7 @@ import Image from "next/image";
 import ServicesDropdown from "./servicesDropdown";
 import MobileMenu from "./mobileMenu";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 interface SubRouteDetail {
   name: string;
@@ -39,8 +40,9 @@ const NavbarLink: FC<SubRouteDetail> = ({ name, route }) => {
 const Navbar: FC = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
-  const navBarList: NavBarList[] = [
+  let navBarList: NavBarList[] = [
     {
       name: "Services",
       route: "/",
@@ -52,31 +54,36 @@ const Navbar: FC = () => {
       ],
     },
     {
-      name: "Case Studies",
-      route: "#CaseStudies",
-      subRoute: false,
-    },
-    {
       name: "About Us",
       route: "/aboutUs",
       subRoute: false,
     },
   ];
 
+  if (router.pathname !== "/aboutUs") {
+    navBarList = [
+      ...navBarList,
+      {
+        name: "Case Studies",
+        route: "#CaseStudies",
+        subRoute: false,
+      },
+    ];
+  }
+
   return (
     <div className="relative bg-white md:px-[7vw]">
       <nav className="px-4 md:px-0">
         <div className="flex items-center justify-between h-16">
-        
           <div className="flex items-center">
-          <Link href="/" className="cursor-pointer">
-            <Image
-              src="https://c.animaapp.com/MXeDvc3F/img/group-31--1--2@2x.png"
-              alt="Logo"
-              width={150}
-              height={60}
-            />
-                      </Link>
+            <Link href="/" className="cursor-pointer">
+              <Image
+                src="https://c.animaapp.com/MXeDvc3F/img/group-31--1--2@2x.png"
+                alt="Logo"
+                width={150}
+                height={60}
+              />
+            </Link>
           </div>
 
           <div className="flex justify-end items-center ">
