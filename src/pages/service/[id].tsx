@@ -29,7 +29,7 @@ const Landing: React.FC<LandingProps> = ({ serviceData }) => {
       <Hero
         imageUrl={serviceData.heroImage}
         titleText={serviceData.heroText}
-        buttonClasses={serviceData.buttonClass}
+
       />
 
       {serviceData.serviceDetails.map((currentDetails, index) => {

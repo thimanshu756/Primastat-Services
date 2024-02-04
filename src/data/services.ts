@@ -15,16 +15,15 @@ export interface ServiceData {
 
   heroText: string;
   heroImage: string;
-  buttonClass: string;
+
   serviceDetails: ServiceDetail[];
 }
 
 const bigData = {
   serviceId: "bigData",
-  breadCrumbsText: "Home \u25B6 Services \u25B6  Big Data \u25BD ",
+  breadCrumbsText: "Home \u25B6 Services \u25B6  Big Data  ",
   heroText: "Architect, Implement, Govern: Transform Your Data Landscape",
   heroImage: "/public/services/bitData/hero.jpeg",
-buttonClass:"bg-stone-500 border-white text-white hover:border hover:border-stone-500  hover:bg-white hover:text-stone-500 transition duration-300 ease-in-out",
 
   serviceDetails: [
     {
@@ -57,12 +56,9 @@ buttonClass:"bg-stone-500 border-white text-white hover:border hover:border-ston
 
 const dataVisualization = {
   serviceId: "dataVisualization",
-  breadCrumbsText: "Home \u25B6  Services \u25B6  Data Visualization \u25BD ",
+  breadCrumbsText: "Home \u25B6  Services \u25B6  Data Visualization  ",
   heroText: "Visualize Insights, Empower Decisions: Uncover the Power of Data",
   heroImage: "/public/services/dataVisualization/hero.png",
-
-
-  buttonClass:"bg-orange-600 border-white text-white hover:border hover:border-orange-600 hover:bg-white hover:text-orange-600 transition duration-300 ease-in-out",
 
   serviceDetails: [
     {
@@ -75,9 +71,18 @@ const dataVisualization = {
           icon: "/public/services/dataVisualization/logo-1.png",
           text: "Apache Superset",
         },
-        { icon: "/public/services/dataVisualization/logo-2.png", text: "Kibana" },
-        { icon: "/public/services/dataVisualization/logo-3.png", text: "Grafana" },
-        { icon: "/public/services/dataVisualization/logo-4.png", text: "Plotly Dash" },
+        {
+          icon: "/public/services/dataVisualization/logo-2.png",
+          text: "Kibana",
+        },
+        {
+          icon: "/public/services/dataVisualization/logo-3.png",
+          text: "Grafana",
+        },
+        {
+          icon: "/public/services/dataVisualization/logo-4.png",
+          text: "Plotly Dash",
+        },
       ],
     },
 
@@ -111,11 +116,9 @@ const dataVisualization = {
 
 const machineLearning = {
   serviceId: "machineLearning",
-  breadCrumbsText: "Home \u25B6  Services \u25B6  Machine Learning \u25BD ",
+  breadCrumbsText: "Home \u25B6  Services \u25B6  Machine Learning  ",
   heroText: "Build, Deploy, Manage your Machine Learning Workflows",
   heroImage: "/public/services/machineLearning/hero.jpeg",
-
-  buttonClass:"bg-orange-600 border-white text-white hover:border hover:border-orange-600 hover:bg-white hover:text-orange-600 transition duration-300 ease-in-out",
 
   serviceDetails: [
     {
@@ -159,5 +162,5 @@ const machineLearning = {
   ],
 };
 
-const serviceList =[bigData, dataVisualization, machineLearning];
-export default serviceList ;
+const serviceList = [bigData, dataVisualization, machineLearning];
+export default serviceList;

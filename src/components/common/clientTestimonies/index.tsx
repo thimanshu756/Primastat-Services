@@ -8,16 +8,7 @@ interface ClientProps {
 }
 
 const Client: React.FC<ClientProps> = ({ clientList }) => {
-  const getGridClass = () => {
-    const listLength = clientList.length;
-    if (listLength > 2) {
-      return "md:grid-cols-3 md:w-[47vw]";
-    } else if (listLength > 1) {
-      return "md:grid-cols-2 md:w-[32vw]";
-    } else {
-      return "md:grid-cols-1 md:w-[17vw";
-    }
-  };
+  
   return (
     <div className="bg-[#00388B] mx-auto p-4 text-white">
       <div className="text-center text-2xl font-semibold py-12 pb-20">
@@ -36,10 +27,10 @@ const Client: React.FC<ClientProps> = ({ clientList }) => {
         </div>
       </div>
 
-      <div className="text-center text-xl font-semibold text-[#f34a4a]">
+      <div className="text-center text-3xl font-semibold text-[#f34a4a]">
         Let’s work together!
       </div>
-      <div className="text-center text-3xl font-semibold my-12">
+      <div className="text-center text-5xl font-semibold my-12">
         Transform your Business with us
       </div>
       <div className="flex justify-center my-8">

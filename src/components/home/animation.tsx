@@ -31,18 +31,20 @@ export default function Animation() {
     },
     {
       index: 1,
-      title: "Big Data",
-      imageSrc: `/public/services/home-animation/big-data.png`,
-      description: "Organize, manage and transform your data",
-      route:"/service/bigData" 
-    },
-    {
-      index: 2,
-
       title: "Machine Learning",
       imageSrc: `/public/services/home-animation/machine-learning.svg`,
       description: "Tailored ML solutions for exponential growth",
       route: "/service/machineLearning"
+    },
+    {
+      index: 2,
+
+      
+
+      title: "Big Data",
+      imageSrc: `/public/services/home-animation/big-data.png`,
+      description: "Organize, manage and transform your data",
+      route:"/service/bigData" 
     },
   ];
 
