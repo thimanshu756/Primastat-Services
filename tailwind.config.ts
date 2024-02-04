@@ -26,6 +26,7 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       animation: {
+        'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
   
         rise: 'rise 1s ease-out forwards',
@@ -37,7 +38,10 @@ const config: Config = {
            fadeInRight: 'fadeInRight 0.5s ease-in-out forwards',
       },
       keyframes: {
-
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
         'infinite-scroll': {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-100%)' },
