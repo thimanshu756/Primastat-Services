@@ -35,33 +35,19 @@ const LogoCarousel: React.FC<LogoCarouselProps> = ({ logos, color }) => {
     >
       <ul
         ref={logosRef}
-        className="flex items-center justify-center md:justify-end [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+        className="flex justify-end items-end [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
       >
         {logos.map((logo, index) => (
-          <li key={index}>
-            {/* <Image
-              src={logo.src}
-              alt={logo.alt}
-             
-
-              layout="responsive" // Ensures the image scales properly
-              // Fixed height; the width will be automatically determined
-              width={75}
-              height={25}// This is a placeholder, adjust to maintain the aspect ratio if needed
-              priority
-              // className="h-24 object-contain rounded-8" 
-              
-           
-              className="rounded-8"// 'h-12' sets a fixed height; 'object-contain' maintains the aspect ratio
-         
-            /> */}
- <Image
+          <li key={index} className="mx-8">
+          
+            <Image
               src={logo.src}
               alt={logo.alt}
               width={75}
               height={25}
+              objectFit="contain" 
               priority
-              className="rounded-8"
+              className="rounded-8 h-16 w-auto"
             />
           </li>
         ))}

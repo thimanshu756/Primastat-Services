@@ -1,5 +1,5 @@
 // components/HeroImage.js
-import useScrollAnimation from '@/customHooks/useScrollAnimation';
+
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
