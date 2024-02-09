@@ -72,7 +72,7 @@ export default function Animation() {
   };
 
   return (
-    <div className="relative w-full md:animation-container mb-[10vh] md:mb-[40vh]">
+    <div className="relative w-full md:animation-container ">
       <div className="flex flex-col md:flex-row md:justify-between bg-black">
         {cardData.map((data) => (
           <Card
