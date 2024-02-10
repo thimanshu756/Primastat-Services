@@ -69,7 +69,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
       <Image
         src={imageSrc}
         alt={imageAlt}
-        className={`w-full h-[50vh]  md:h-fit md:w-[85%]  object-cover rounded-3xl ${
+        className={`w-full h-[35vh]  md:h-fit md:w-[85%]  object-cover rounded-3xl ${
           shouldRight
             ? "md:rounded-l-2xl md:rounded-r-none"
             : "md:rounded-r-2xl md:rounded-l-none"
