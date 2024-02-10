@@ -129,7 +129,7 @@ export default function ContactForm() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!captchaValue) {
-      alert("Please solve the CAPTCHA");
+      alert("Please resolve the CAPTCHA");
       return;
     }
     if (loading) return;
@@ -163,8 +163,9 @@ export default function ContactForm() {
         );
 
         if (response.ok) {
-          alert("form submitted");
+          alert("Form submitted successfully");
           setDisabled(true);
+          setCaptchaValue(null);
           // Clear the form data upon successful submission
           setFormData({
             firstName: "",
@@ -287,7 +288,7 @@ export default function ContactForm() {
         </span>
       </div>
       <ReCAPTCHA
-        sitekey="6Lc7Z24pAAAAAH88ke5hzyAs3N19xAcdtxUtAof" // Replace "YOUR_SITE_KEY_HERE" with your actual site key
+        sitekey="6LcZbW4pAAAAAFVYARd2O1-a8aYHp90eIy5hVBYO" // Replace "YOUR_SITE_KEY_HERE" with your actual site key
         onChange={handleCaptchaChange}
       />
       <button
