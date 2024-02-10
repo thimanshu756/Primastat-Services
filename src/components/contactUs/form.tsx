@@ -75,25 +75,39 @@ export default function ContactForm() {
       try {
         console.log("formData ->", formData);
 
-        debugger;
-        fetch(
-      'https://script.google.com/macros/s/AKfycbxMDDR72lMgIvqp6StMRx3zCjt-aaFOtZi4yDaKSnkbnXrxdtFUK9x4LynIFOF1kpzPKw/exec',
-      {
-        method: 'POST',
-        body: formData
-      }
-    )
-        // Clear the form data upon successful submission
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          company: "",
-          phone: "",
-          reason: "",
-          message: "",
-        });
-        // Optionally, display a success message to the user
+        // Convert formData object to FormData for sending
+        const formToSend = new FormData();
+        for (const key in formData) {
+          formToSend.append(key, formData[key]);
+        }
+
+        // Note: Removed debugger for cleaner code
+        const response = await fetch(
+          'https://script.google.com/macros/s/AKfycbxsO-w_FnAusfhuMSZkcxH8tVxfKaFNl4HPwxdqFHhv7gVH4yIn6jRM0-wXiZaLztUIIg/exec',
+          {
+            method: 'POST',
+            body: formToSend, // Send as FormData
+            // Headers are not needed for FormData as the browser sets the correct Content-Type
+          }
+        );
+
+        if (response.ok) {
+          // Clear the form data upon successful submission
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            company: "",
+            phone: "",
+            reason: "",
+            message: "",
+          });
+          // Optionally, display a success message to the user
+        } else {
+          // Handle server errors or invalid responses
+          console.error("Server error:", response.statusText);
+          // Optionally, display an error message to the user
+        }
       } catch (error) {
         // Handle API errors here
         console.error("API error:", error);
