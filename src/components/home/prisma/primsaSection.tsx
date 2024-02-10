@@ -1,6 +1,6 @@
-import Image from "next/image";
 import React, { FC } from "react";
-
+import Image from "next/image";
+import { motion } from "framer-motion";
 interface DotsProps {
   hide?: boolean;
 }
@@ -8,20 +8,19 @@ interface HeadingProps {
   text: string;
 }
 
-interface Content {
+interface content {
   heading: string;
   text: string;
 }
 
 interface PrimsaSectionProps {
   title: string;
-  content: Content;
+  content: content;
   imageSrc: string;
   imageAlt: string;
   alignment?: "between" | "start";
   additionalClasses?: string;
 }
-
 const Dots: FC<DotsProps> = ({ hide = false }) => {
   return (
     <span
@@ -60,11 +59,36 @@ const PrimsaSection: FC<PrimsaSectionProps> = ({
       ? "justify-between items-center flex-col md:flex-row"
       : "justify-start items-start flex-col";
 
+  const textVariants = {
+    offscreen: { x: -100, opacity: 0 },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.4, duration: 2.5 },
+    },
+  };
+
+  const imageVariants = {
+    offscreen: { x: 100, opacity: 0 },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.4, duration: 2.5 },
+    },
+  };
+
   return (
     <div className={`py-8 md:py-16 ${additionalClasses}`}>
       <Heading text={title} />
       <div className={`flex ${alignmentClasses} mt-12`}>
-        <div className="md:w-[60%] w-full">
+        <motion.div
+          id={`text-${title}`}
+          className="md:w-[60%] w-full"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: false, amount: 0.5 }}
+          variants={textVariants}
+        >
           <div className="w-[100%] md:w-[70%]">
             <p className="text-center md:text-left text-2xl md:text-3xl font-semibold">
               {content.heading}
@@ -74,13 +98,19 @@ const PrimsaSection: FC<PrimsaSectionProps> = ({
               dangerouslySetInnerHTML={{ __html: content.text }}
             />
           </div>
-        </div>
-        <div className={`${imageWidth}  object-cover rounded-3xl p-4`}>
+        </motion.div>
+        <motion.div
+          id={`image-${title}`}
+          className={`${imageWidth} object-cover rounded-3xl p-4`}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: false, amount: 0.5 }}
+          variants={imageVariants}
+        >
           <Image src={imageSrc} alt={imageAlt} height={800} width={800} />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
 };
-
 export default PrimsaSection;
