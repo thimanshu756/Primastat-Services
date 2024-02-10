@@ -16,7 +16,12 @@ const CaseStudy: React.FC = () => {
         text={"Home \u25B6 Case Studies"}
       />
       <Hero />
-      <CaseStudies hideViewAll caseStudiesList={caseStudiesList} />
+      <CaseStudies
+        backgroundColor={`#F2F2F2`}
+        textColor={`#000000`}
+        hideViewAll
+        caseStudiesList={caseStudiesList}
+      />
 
       <Footer />
     </div>
