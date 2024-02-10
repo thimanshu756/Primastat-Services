@@ -63,11 +63,13 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
   );
 
   const imageSection = (
-    <div className="w-[100vw] md:w-[35vw] h-full">
+    <div className={`w-[100vw] md:w-[35vw] h-full flex ${
+      shouldRight ? "md:justify-end" : "md:justify-start"
+    } `}>
       <Image
         src={imageSrc}
         alt={imageAlt}
-        className={`w-full h-[50vh] object-cover rounded-3xl ${
+        className={`w-full h-[50vh]  md:h-fit md:w-[85%]  object-cover rounded-3xl ${
           shouldRight
             ? "md:rounded-l-2xl md:rounded-r-none"
             : "md:rounded-r-2xl md:rounded-l-none"
