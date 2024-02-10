@@ -74,8 +74,26 @@ export default function ContactForm() {
     if (validateForm()) {
       try {
         console.log("formData ->", formData);
+
         debugger;
-        await axios.post("YOUR_API_ENDPOINT_HERE", formData);
+        fetch(
+      'https://script.google.com/macros/s/AKfycbxMDDR72lMgIvqp6StMRx3zCjt-aaFOtZi4yDaKSnkbnXrxdtFUK9x4LynIFOF1kpzPKw/exec',
+      {
+        method: 'POST',
+        body: formData
+      }
+    )
+      .then((res) => {
+        if (res.status === 200) {
+          console.log(res);
+          alert('Your query has been submitted successfully');
+        } else {
+          throw new Error('Failed to submit the query');
+        }
+      })
+      .catch((err) => {
+        alert('Failed to submit the query');
+      });
         // Clear the form data upon successful submission
         setFormData({
           firstName: "",

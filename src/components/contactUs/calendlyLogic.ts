@@ -1,5 +1,4 @@
 export const openCalendly = () => {
-
   // we are not importing types so need to use ts-ignore
   if (
     typeof window !== 'undefined' &&
@@ -10,7 +9,7 @@ export const openCalendly = () => {
   ) {
     // @ts-ignore
     window.Calendly.initPopupWidget({
-      url: 'https://calendly.com/prima-stat?hide_gdpr_banner=1&primary_color=fea26e'
+      url: 'https://calendly.com/primastat?primary_color=003a8b'
     });
   }
 };
