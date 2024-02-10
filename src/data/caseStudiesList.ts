@@ -57,5 +57,108 @@ export const caseStudiesList: Array<CaseStudy> = [
     ],
   },
 
+  { caseStudyId:"blog-1",
+  image: "https://c.animaapp.com/MXeDvc3F/img/istock-1143391583-1@2x.png",
+  message:
+    "Primastat Transforms DSquare with Groundbreaking BI System",
+  html: caseStudy1,
+  route: "/caseStudy/blog-1",
+  indexItems: [
+    {name:"tag1",id:"tag1"},
+    {name:"tag2",id:"tag2"}
+  ],
+},
+{ caseStudyId:"blog-1",
+    image: "https://c.animaapp.com/MXeDvc3F/img/istock-1143391583-1@2x.png",
+    message:
+      "Primastat Transforms DSquare with Groundbreaking BI System",
+    html: caseStudy1,
+    route: "/caseStudy/blog-1",
+    indexItems: [
+      {name:"tag1",id:"tag1"},
+      {name:"tag2",id:"tag2"}
+    ],
+  },
+  { caseStudyId:"blog-1",
+  image: "https://c.animaapp.com/MXeDvc3F/img/istock-1143391583-1@2x.png",
+  message:
+    "Primastat Transforms DSquare with Groundbreaking BI System",
+  html: caseStudy1,
+  route: "/caseStudy/blog-1",
+  indexItems: [
+    {name:"tag1",id:"tag1"},
+    {name:"tag2",id:"tag2"}
+  ],
+},
+{ caseStudyId:"blog-1",
+    image: "https://c.animaapp.com/MXeDvc3F/img/istock-1143391583-1@2x.png",
+    message:
+      "Primastat Transforms DSquare with Groundbreaking BI System",
+    html: caseStudy1,
+    route: "/caseStudy/blog-1",
+    indexItems: [
+      {name:"tag1",id:"tag1"},
+      {name:"tag2",id:"tag2"}
+    ],
+  },
+  { caseStudyId:"blog-1",
+  image: "https://c.animaapp.com/MXeDvc3F/img/istock-1143391583-1@2x.png",
+  message:
+    "Primastat Transforms DSquare with Groundbreaking BI System",
+  html: caseStudy1,
+  route: "/caseStudy/blog-1",
+  indexItems: [
+    {name:"tag1",id:"tag1"},
+    {name:"tag2",id:"tag2"}
+  ],
+},
+{ caseStudyId:"blog-1",
+    image: "https://c.animaapp.com/MXeDvc3F/img/istock-1143391583-1@2x.png",
+    message:
+      "Primastat Transforms DSquare with Groundbreaking BI System",
+    html: caseStudy1,
+    route: "/caseStudy/blog-1",
+    indexItems: [
+      {name:"tag1",id:"tag1"},
+      {name:"tag2",id:"tag2"}
+    ],
+  },
+  { caseStudyId:"blog-1",
+  image: "https://c.animaapp.com/MXeDvc3F/img/istock-1143391583-1@2x.png",
+  message:
+    "Primastat Transforms DSquare with Groundbreaking BI System",
+  html: caseStudy1,
+  route: "/caseStudy/blog-1",
+  indexItems: [
+    {name:"tag1",id:"tag1"},
+    {name:"tag2",id:"tag2"}
+  ],
+},
+{ caseStudyId:"blog-1",
+    image: "https://c.animaapp.com/MXeDvc3F/img/istock-1143391583-1@2x.png",
+    message:
+      "Primastat Transforms DSquare with Groundbreaking BI System",
+    html: caseStudy1,
+    route: "/caseStudy/blog-1",
+    indexItems: [
+      {name:"tag1",id:"tag1"},
+      {name:"tag2",id:"tag2"}
+    ],
+  },
+  { caseStudyId:"blog-1",
+  image: "https://c.animaapp.com/MXeDvc3F/img/istock-1143391583-1@2x.png",
+  message:
+    "Primastat Transforms DSquare with Groundbreaking BI System",
+  html: caseStudy1,
+  route: "/caseStudy/blog-1",
+  indexItems: [
+    {name:"tag1",id:"tag1"},
+    {name:"tag2",id:"tag2"}
+  ],
+},
+
+
+
+
   // ... you can add more case studies here
 ];
