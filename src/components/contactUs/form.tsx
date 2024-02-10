@@ -22,6 +22,9 @@ export default function ContactForm() {
     message: "",
   });
 
+  const [disabled,setDisabled] = useState(false);
+  const [loading,setLoading]=useState(false);
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -72,8 +75,9 @@ export default function ContactForm() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validateForm()) {
+
       try {
-        console.log("formData ->", formData);
+        setLoading(true);
 
         // Convert formData object to FormData for sending
         const formToSend = new FormData();
@@ -92,6 +96,9 @@ export default function ContactForm() {
         );
 
         if (response.ok) {
+
+          alert("form submitted")
+          setDisabled(true);
           // Clear the form data upon successful submission
           setFormData({
             firstName: "",
@@ -112,6 +119,8 @@ export default function ContactForm() {
         // Handle API errors here
         console.error("API error:", error);
         // Optionally, display an error message to the user
+      }finally{
+        setLoading(false);
       }
     }
   };
@@ -119,7 +128,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="md:w-[60vw]  flex-1 mx-auto p-8 space-y-4  flex-1 text-black"
+      className="md:w-[60vw]  flex-1 mx-auto p-8 md:space-y-4  flex-1 text-black"
     >
       <div className="flex flex-col md:flex-row md:space-x-4">
         <span className="flex-1">
@@ -218,10 +227,11 @@ export default function ContactForm() {
       </div>
       {/* Insert reCAPTCHA component here */}
       <button
+      disabled={disabled}
         type="submit"
-        className="bg-blue-500 text-white py-2 px-4 rounded-md w-full"
+        className="bg-blue-500 text-white py-2 px-4 rounded-md w-full mt-8"
       >
-        Submit
+        {loading?"Loading":"Submit"}
       </button>
     </form>
   );

@@ -22,7 +22,7 @@ export const Landing = (): JSX.Element => {
       />
       <Hero />
       <LogoCarousel logos={logos} color="#00388B" />
-      <Prisma/>
+    <div className="v-[100vw] overflow-hidden">  <Prisma/></div>
       <div className="my-24 bg-[#F2F2F2]"/>
       <CaseStudies caseStudiesList={caseStudiesList} />
       <Client clientList={clientList} />
