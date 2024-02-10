@@ -22,13 +22,11 @@ export const Landing = (): JSX.Element => {
       <Hero />
       <Animation/>
       <Prisma/>
+      <div className="my-24 bg-[#F2F2F2]"/>
       <CaseStudies caseStudiesList={caseStudiesList}/>
-      <p className="text-white text-3xl py-12 text-bold flex justify-center items-center bg-[#00388B]">Tools we specialize in</p>
-      <LogoCarousel logos={logos} />
+      {/* <p className="text-white text-3xl py-12 text-bold flex justify-center items-center bg-[#00388B]">Tools we specialize in</p> */}
+      {/* <LogoCarousel logos={logos} /> */}
       <Client clientList={clientList} />
-
-
-
       <Footer />
     </div>
   );

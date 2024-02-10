@@ -27,7 +27,7 @@ const bigData = {
 
   serviceDetails: [
     {
-      image: "/public/services/bitData/img1.png",
+      image: "/public/services/bitData/lakehouse.png",
       heading: "Data Warehousing",
       description:
         "Elevate Your data organization with advanced engineering and robust management",

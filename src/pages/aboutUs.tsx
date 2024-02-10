@@ -10,6 +10,7 @@ import { clientList } from "@/data/clientTestimonies";
 import { caseStudiesList } from "@/data/caseStudiesList";
 import BreadCrumbs from "@/components/common/breadCrumbs";
 import { logos } from "@/data/clientCarousal";
+import Prisma from "@/components/home/prisma";
 
 export const Landing = (): JSX.Element => {
   return (
@@ -21,10 +22,10 @@ export const Landing = (): JSX.Element => {
       />
       <Hero />
       <LogoCarousel logos={logos} color="#00388B" />
-      <div className="my-24 bg-white"/>
+      <Prisma/>
+      <div className="my-24 bg-[#F2F2F2]"/>
       <CaseStudies caseStudiesList={caseStudiesList} />
       <Client clientList={clientList} />
-
       <Footer />
     </div>
   );

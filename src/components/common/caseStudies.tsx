@@ -67,7 +67,7 @@ const Client: React.FC<ClientProps> = ({ caseStudiesList, hideViewAll = false })
       {!hideViewAll && (
         <Link href="/case-studies">
           <motion.button
-            className="p-2 rounded-full border-orange-600 border mt-4 md:mt-6 px-4 bg-orange-600 text-white hover:border hover:border-orange-600 hover:bg-white hover:text-orange-600 transition duration-300 ease-in-out"
+            className="p-2 rounded-full border-[#FC6736] border mt-4 md:mt-6 px-4 bg-[#FC6736] text-white hover:border hover:border-[#FC6736] hover:bg-white hover:text-[#FC6736] transition duration-300 ease-in-out"
             whileHover={{ scale: 1.05 }}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}

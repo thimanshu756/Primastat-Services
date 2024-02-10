@@ -57,7 +57,7 @@ interface CompanyDetailsProps {
 
 const CompanyDetails: React.FC<CompanyDetailsProps> = ({ name, designation, location, imgLink }) => {
   return (
-    <div className="flex justify-start items-start bg-orange-600 rounded-b-3xl w-full py-4 px-6">
+    <div className="flex justify-start items-start bg-[#FC6736] rounded-b-3xl w-full py-4 px-6">
       <div className="h-16 w-16 rounded-full border-0 flex justify-center items-center mr-4">
         <Image
           src={imgLink}
@@ -87,7 +87,7 @@ const ClientTestimonial: React.FC<ClientDetails> = ({
   return (
     <div className="group bg-white rounded-3xl text-black shadow-custom duration-500 transform hover:scale-105 hover:shadow-custom-hover origin-bottom-left flex flex-col justify-between items-start md:min-h-[20vh] w-full">
       <div>
-        <Rating rating={4} />
+        <Rating rating={5} />
         <Testimony testimony={testimony} />
       </div>
       <CompanyDetails

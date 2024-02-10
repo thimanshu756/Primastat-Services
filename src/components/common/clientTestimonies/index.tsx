@@ -11,7 +11,7 @@ const Client: React.FC<ClientProps> = ({ clientList }) => {
   
   return (
     <div className="bg-[#00388B] mx-auto p-4 text-white">
-      <div className="text-center text-2xl font-semibold py-12 pb-20">
+      <div className="text-center text-4xl font-semibold py-40 pb-20 pt-100">
         A word from our clients
       </div>
 
@@ -27,13 +27,13 @@ const Client: React.FC<ClientProps> = ({ clientList }) => {
         </div>
       </div>
 
-      <div className="text-center text-3xl pt-8 font-semibold text-[#f34a4a]">
+      <div className="text-center text-3xl pt-20 font-semibold text-[#f34a4a]">
         Let’s work together!
       </div>
-      <div className="text-center text-5xl font-semibold my-12">
+      <div className="text-center text-4xl font-semibold my-12">
         Transform your Business with us
       </div>
-      <div className="flex justify-center my-8">
+      <div className="flex justify-center my-8 pb-20">
         <Link href="/contactUs">
           <div className="bg-white p-2 rounded-full text-black text-center px-4 border border-black hover:border-white  hover:bg-black hover:text-white transition duration-300 ease-in-out">
             Get in touch
