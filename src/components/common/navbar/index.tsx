@@ -58,18 +58,14 @@ const Navbar: FC = () => {
       route: "/aboutUs",
       subRoute: false,
     },
+    {
+      name: "Case Studies",
+      route: router.pathname !== "/aboutUs"? "#CaseStudies":"/case-studies",
+      subRoute: false,
+    },
   ];
 
-  if (router.pathname !== "/aboutUs") {
-    navBarList = [
-      ...navBarList,
-      {
-        name: "Case Studies",
-        route: "#CaseStudies",
-        subRoute: false,
-      },
-    ];
-  }
+
 
   return (
     <div className="relative bg-white md:px-[7vw]">
