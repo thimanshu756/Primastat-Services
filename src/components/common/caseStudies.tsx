@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface CaseStudy {
   image: string;
@@ -10,12 +11,29 @@ interface CaseStudy {
 
 interface ClientProps {
   caseStudiesList: CaseStudy[];
-  hideViewAll?: boolean; // New prop with a default value of false
+  hideViewAll?: boolean;
 }
 
 const Client: React.FC<ClientProps> = ({ caseStudiesList, hideViewAll = false }) => {
   // Determine the list to map over based on hideViewAll
   const listToShow = hideViewAll ? caseStudiesList : caseStudiesList.slice(0, 2);
+
+  // Animation variants
+  const itemVariants = {
+    offscreen: {
+      y: 50,
+      opacity: 0
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 1.2
+      }
+    }
+  };
 
   return (
     <div id="CaseStudies" className="bg-[#00388B] mx-auto p-4 flex flex-col items-center justify-center w-[100vw] pb-24">
@@ -23,8 +41,16 @@ const Client: React.FC<ClientProps> = ({ caseStudiesList, hideViewAll = false })
       <div className={`grid grid-cols-1 ${hideViewAll ? 'md:grid-cols-3 gap-8 md:gap-4 md:w-[90vw]' : 'md:grid-cols-2 gap-8 md:gap-24 md:w-[70vw]'} `}>
         {listToShow.map(({ image, message, route }, index) => (
           <Link key={index} href={route} passHref>
-            <div className="block p-6 flex flex-col items-center cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
-              <div className={`mb-4 relative w-full h-60 overflow-hidden rounded-lg animate-fade-in-up`} style={{ animationDelay: `${index * 0.1}s` }}>
+            <motion.div
+              className="block p-6 flex flex-col items-center cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={itemVariants}
+              transition={{ delay: index * 0.1 }}
+            >
+              <div className={`mb-4 relative w-full h-60 overflow-hidden rounded-lg`}>
                 <Image
                   src={image}
                   alt="Case Study"
@@ -33,18 +59,22 @@ const Client: React.FC<ClientProps> = ({ caseStudiesList, hideViewAll = false })
                 />
               </div>
               <p className="text-left text-white mt-0">{message}</p>
-            </div>
+            </motion.div>
           </Link>
         ))}
       </div>
 
       {!hideViewAll && (
         <Link href="/case-studies">
-          <button
+          <motion.button
             className="p-2 rounded-full border-orange-600 border mt-4 md:mt-6 px-4 bg-orange-600 text-white hover:border hover:border-orange-600 hover:bg-white hover:text-orange-600 transition duration-300 ease-in-out"
+            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
           >
            View All
-          </button>
+          </motion.button>
         </Link>
       )}
     </div>
