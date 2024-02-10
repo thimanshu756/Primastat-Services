@@ -83,17 +83,6 @@ export default function ContactForm() {
         body: formData
       }
     )
-      .then((res) => {
-        if (res.status === 200) {
-          console.log(res);
-          alert('Your query has been submitted successfully');
-        } else {
-          throw new Error('Failed to submit the query');
-        }
-      })
-      .catch((err) => {
-        alert('Failed to submit the query');
-      });
         // Clear the form data upon successful submission
         setFormData({
           firstName: "",
