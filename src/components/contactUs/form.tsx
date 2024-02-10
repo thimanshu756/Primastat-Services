@@ -140,13 +140,16 @@ export default function ContactForm() {
         // Convert formData object to FormData for sending
         const formToSend = new FormData();
         for (const key in formData) {
-          if (key === "phone") {
-            // Combine selectedCode with phone number for the 'phone' key
-            const fullPhoneNumber = `${selectedCode} ${formData[key]}`;
-            formToSend.append(key, fullPhoneNumber);
-          } else {
-            // For all other keys, append them as they are
-            formToSend.append(key, formData[key]);
+          if (formData.hasOwnProperty(key)) {
+            const value = formData[key as keyof typeof formData]; // Type assertion here
+            if (key === "phone") {
+              // Combine selectedCode with phone number for the 'phone' key
+              const fullPhoneNumber = `${selectedCode} ${value}`;
+              formToSend.append(key, fullPhoneNumber);
+            } else {
+              // For all other keys, append them as they are
+              formToSend.append(key, value);
+            }
           }
         }
         // Note: Removed debugger for cleaner code
