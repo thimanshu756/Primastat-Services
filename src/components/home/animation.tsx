@@ -38,21 +38,21 @@ export default function Animation() {
     {
       index: 0,
       title: "Data Visualization",
-      imageSrc: "/public/services/home-animation/data-visualization.png",
+      imageSrc: "/public/services/home-animation/data-viz-service.svg",
       description: "We help you unlock insights that drive growth and enhance decision-making.",
       route: "/service/dataVisualization"
     },
     {
       index: 1,
       title: "Machine Learning",
-      imageSrc: "/public/services/home-animation/machine-learning.svg",
+      imageSrc: "/public/services/home-animation/ml-service.svg",
       description: "Tailored ML solutions for exponential growth.",
       route: "/service/machineLearning"
     },
     {
       index: 2,
       title: "Big Data",
-      imageSrc: "/public/services/home-animation/big-data.png",
+      imageSrc: "/public/services/home-animation/big-data-service.svg",
       description: "Organize, manage and transform your data.",
       route: "/service/bigData"
     },
