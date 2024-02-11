@@ -20,13 +20,14 @@ interface LandingProps {
   htmlContent: string;
   indexItems: IndexItem[];
   title:string
+  headerImg: string
 }
 
-const Landing: React.FC<LandingProps> = ({ htmlContent, indexItems ,title}) => {
+const Landing: React.FC<LandingProps> = ({ htmlContent, indexItems ,title, headerImg}) => {
   return (
     <div className="h-100vh w-100vw bg-[#F2F2F2]">
       <Navbar />
-      <Hero title={title} />
+      <Hero title={title} headerImg={headerImg} />
       <BlogHandler htmlContent={htmlContent} indexItems={indexItems} />
       <CaseStudies caseStudiesList={caseStudiesList} />
       <Client clientList={clientList} />
@@ -59,6 +60,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       htmlContent: caseStudyData.html,
       indexItems: caseStudyData.indexItems,
       title: caseStudyData.message,
+      headerImg: caseStudyData.headerImg
     },
   };
 };

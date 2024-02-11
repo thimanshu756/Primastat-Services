@@ -57,7 +57,7 @@ const BlogComponent: FC<BlogComponentProps> = ({ htmlContent, indexItems }) => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row bg-white text-gray-800">
+    <div className="flex flex-col md:flex-row bg-white text-gray-800 p-8 md:p-16">
       {indexItems.length > 0 && (
         <IndexSidebar
           indexItems={indexItems}
