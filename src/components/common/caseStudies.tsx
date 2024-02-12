@@ -45,6 +45,7 @@ const Client: React.FC<ClientProps> = ({
       },
     },
   };
+  const isSingleCaseStudy = caseStudiesList.length === 1;
 
   return (
     <div
@@ -58,6 +59,8 @@ const Client: React.FC<ClientProps> = ({
         className={`grid grid-cols-1 ${
           hideViewAll
             ? "md:grid-cols-3 gap-8 md:gap-4 md:w-[90vw]"
+            : isSingleCaseStudy
+            ? "flex items-center"
             : "md:grid-cols-2 gap-8 md:gap-24 md:w-[70vw]"
         } `}
       >
@@ -96,7 +99,7 @@ const Client: React.FC<ClientProps> = ({
       {!hideViewAll && (
         <Link href="/case-studies">
           <motion.button
-            className="p-2 rounded-full border-[#FC6736] border mt-4 md:mt-6 px-4 bg-[#FC6736] text-white hover:border hover:border-[#FC6736] hover:bg-white hover:text-[#FC6736] transition duration-300 ease-in-out"
+            className="p-2 rounded-full border-[#FC6736] border mt-4 md:mt-6 pl-4 pr-4 bg-[#FC6736] text-white hover:border hover:border-[#FC6736] hover:bg-white hover:text-[#FC6736] transition duration-300 ease-in-out"
             whileHover={{ scale: 1.05 }}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}

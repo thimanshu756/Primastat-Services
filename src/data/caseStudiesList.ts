@@ -128,7 +128,7 @@ export const caseStudiesList: Array<CaseStudy> = [
         "name": "Collaborate with Primastat",
         "id": "collab"
       }
-    ],
+    ]
   },
   // ... you can add more case studies here
 ];
