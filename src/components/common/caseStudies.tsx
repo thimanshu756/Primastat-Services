@@ -14,6 +14,7 @@ interface ClientProps {
   hideViewAll?: boolean;
   backgroundColor?: string;
   textColor?: string;
+  hideOurWork ?: boolean
 }
 
 const Client: React.FC<ClientProps> = ({
@@ -21,6 +22,7 @@ const Client: React.FC<ClientProps> = ({
   hideViewAll = false,
   backgroundColor = "#00388B",
   textColor = "#ffffff",
+  hideOurWork = false
 }) => {
   // Determine the list to map over based on hideViewAll
   const listToShow = hideViewAll
@@ -49,6 +51,9 @@ const Client: React.FC<ClientProps> = ({
       id="CaseStudies"
       className={`mx-auto p-4 flex flex-col items-center justify-center w-[100vw] pt-24 pb-24 bg-[${backgroundColor}]`}
     >
+      {!hideOurWork && (
+        <p className="text-white text-3xl py-12 font-bold">Our Work</p>
+      )}
       <div
         className={`grid grid-cols-1 ${
           hideViewAll

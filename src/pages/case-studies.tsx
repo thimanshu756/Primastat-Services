@@ -21,6 +21,7 @@ const CaseStudy: React.FC = () => {
         textColor={`#000000`}
         hideViewAll
         caseStudiesList={caseStudiesList}
+        hideOurWork
       />
 
       <Footer />

@@ -37,12 +37,13 @@ const PrimsaSectionsData: PrimsaSectionProps[] = [
     title: "Forge",
     content: {
       heading: "Empower your projects with advanced tools",
-      text: "<p>At <strong>Primastat</strong>, we provide cutting-edge tools to enhance your projects. Our Forge platform offers seamless integration of machine learning models and data analytics tools, empowering your business with efficiency and innovation.</p>",
+      text: "<p>At <strong>Primastat</strong>, we provide cutting-edge tools to enhance your projects. Our Forge platform offers seamless integration of machine learning models and data analytics tools, empowering your business with efficiency and innovation.<br>We will provide you the tools and help you build an efficient data system. Now, don’t worry about chaotic data storage, Primastat is here to setup state of the art <strong>Data Lakehouse</strong> and <strong>Data Warehouse</strong> architecture.</p>",
     },
-    imageSrc: "/public/forge/forge.png",
+    imageSrc: "/public/forge/forge.svg",
     imageAlt: "Forge Image",
-    alignment: "start",
-    additionalClasses: "mt-8",
+    alignment: "between"
+    // alignment: "start",
+    // additionalClasses: "mt-8",
   },
 ];
 
