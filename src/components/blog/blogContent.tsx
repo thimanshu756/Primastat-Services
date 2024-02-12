@@ -11,7 +11,7 @@ const BlogContent: FC<BlogContentProps> = ({ htmlContent, contentRef }) => {
         <div
             ref={contentRef}
             dangerouslySetInnerHTML={{ __html: htmlContent }}
-            className="md:flex-1 p-4 transition-all ease-in-out duration-300"
+            className="md:flex-1 w-3/4 p-4 transition-all ease-in-out duration-300"
         />
     );
 };

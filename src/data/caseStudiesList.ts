@@ -11,74 +11,90 @@ export interface CaseStudy {
 const caseStudy1 = `
 <div>
 <h1 class="caseStudy-heading">
-    Primastat Transforms DSquare with Groundbreaking BI System
-</h1>
-<p class="caseStudy-paragraph">
-Business Intelligence logic is the engine that decodes the complexity of data, unraveling patterns and trends that might otherwise remain hidden.<br>
-It involves the systematic collection, processing, and analysis of data to extract meaningful insights, enabling organizations to gain a comprehensive understanding of their operations.<br>
-By employing sophisticated algorithms and analytical methodologies, BI logic transforms raw data into actionable information, providing a foundation for strategic decision-making.<br>
-At the heart of effective Business Intelligence lies the art of visualizing data. Traditional data, presented in spreadsheets and tables, often fails to convey the richness and nuances hidden within.<br>
-Visualizations, ranging from charts and graphs to interactive dashboards, bring data to life, making it accessible and understandable to a broader audience.
- Visualization not only simplifies complex datasets but also facilitates the identification of trends, outliers, and correlations, turning raw numbers into a narrative that informs and guides decision-makers.
-</p>
-<p class="caseStudy-paragraph">
-    In a strategic move aimed at revolutionizing data-driven decision-making, 
-    <strong>Primastat</strong> has successfully established a comprehensive 
-    <em>Business Intelligence (BI)</em> system for <em>DSquare</em> from scratch.
-</p>
-<h2 class="caseStudy-subHeading" id="understanding">
-    Understanding Unique Needs
-</h2>
-<p class="caseStudy-paragraph">
-As Primastat spearheads the transformation of DSquare's data landscape, the focus goes beyond mere data aggregation. 
-It delves deep into the logic of Business Intelligence, weaving together a narrative that encapsulates the essence of DSquare's operations.<br>
- Through a carefully crafted BI system, Primastat not only introduces efficiency in data processing but translates the data into a visual language that speaks volumes to DSquare's leadership.
-</p>
-<p class="caseStudy-paragraph">
-In the subsequent sections, explore the journey undertaken by Primastat and DSquare, 
-witnessing how BI logic and data visualization converge to empower DSquare with a comprehensive, real-time understanding of their business landscape. <br>
-Together, they navigate the realms of informed decision-making, operational efficiency, and the cultivation of a data-driven culture that positions DSquare at the forefront of innovation and success.
-</p>
-<p class="caseStudy-paragraph">    
-The journey began with an in-depth analysis
-     of <em>DSquare's</em> specific business requirements. <strong>Primastat</strong>
-      collaborated closely with <em>DSquare</em> stakeholders to identify key performance 
-      indicators and crucial data points essential for informed decision-making.
-</p>
-<h2 class="caseStudy-subHeading" id="blueprint">
-    Crafting the Blueprint
-</h2>
-<p class="caseStudy-paragraph">
-In laying the foundation for DSquare's transformative journey into the realm of Business Intelligence (BI), Primastat undertook the task of crafting a meticulously tailored blueprint.<br>
- This strategic initiative involved the precise selection of a technology stack, demonstrating Primastat's expertise in the design of robust database architecture.
-  This architectural framework was carefully engineered to facilitate efficient data storage, retrieval, and analysis.
-   Simultaneously, Primastat strategically chose visualization tools that seamlessly integrated with DSquare's existing infrastructure, ensuring a harmonious blend of technology and insight.
-</p>
-<h2 class="caseStudy-subHeading" id="implementation">
-    Implementation and Integration
-</h2>
-<p class="caseStudy-paragraph">
-In the pursuit of BI excellence, Primastat embarked on a phase of meticulous implementation and seamless integration, leveraging its expertise to design a bespoke ETL (Extract, Transform, Load) application. This application played a pivotal role in denormalizing data, streamlining the intricate process of transforming complex datasets into a format conducive to insightful analysis.
+    Building high quality Business Intelligence Systems for Dsquare using Apache Superset
+</h1><br>
+<p class="caseStudy-paragraph" id="intro">
+Business Intelligence (BI) stands as the cornerstone of informed decision-making in today's dynamic business landscape.
+At its core, BI involves the systematic collection, processing, and analysis of data to unearth valuable insights. 
+<br>This process enables organizations to gain a comprehensive understanding of their operations, turning raw data into actionable information.
+<br>By decoding the complexity of data, BI reveals patterns and trends that might otherwise remain hidden, empowering businesses to make strategic 
+<br>decisions backed by evidence.
+From unraveling operational inefficiencies to identifying growth opportunities, BI fosters a data-driven culture, transforming information into a strategic asset. 
 <br>
-Primastat's ETL application, a testament to precision and sophistication, facilitated the integration of diverse data sources within DSquare's ecosystem. By denormalizing data, we ensured that the information became more accessible and amenable to high-performance analytics, laying the groundwork for a comprehensive understanding of DSquare's operations.
-<br>
-An integral component of this transformative journey was the incorporation of Apache Superset, a powerful open-source data exploration and visualization platform. Harnessing the capabilities of Apache Superset, Primastat elevated the BI system's functionality, enabling the creation of high-quality dashboards that provided a visual narrative of DSquare's data landscape.
-<br>
-The utilization of Apache Superset, in synergy with our tailored ETL application, empowered DSquare's teams with an intuitive and interactive platform for data exploration. Dashboards, meticulously crafted, became dynamic windows into the company's key performance indicators, fostering a culture of data-driven decision-making.
-<br>
-As a result of these strategic implementations, Primastat not only executed the plan with precision but elevated DSquare's BI system to new heights. The marriage of denormalization through the ETL application and the visualization prowess of Apache Superset stands as a testament to Primastat's commitment to excellence in BI implementation. This synergy not only streamlined data processes but also empowered DSquare with the tools needed to extract valuable insights, paving the way for a more informed and strategic decision-making landscape. The subsequent sections delve deeper into the impact of these implementations, showcasing the tangible results of a collaborative journey toward BI excellence
+In essence, Business Intelligence is not just a tool; it's a fundamental approach that propels organizations towards agility, innovation, and sustainable success.
 </p>
-<h2 class="caseStudy-subHeading" id=conclusion>
-    Conclusion
-</h2>
+<img src="/public/case-studies/cs1/article_image1.png" alt="Apache Superset" class="caseStudy-image">
+<br>
+<h2 class="caseStudy-subHeading" id="open-source">
+    Power of open source
+</h2><br>
 <p class="caseStudy-paragraph">
-As Primastat and DSquare traverse the transformative landscape of Business Intelligence (BI), the culmination of their collaborative efforts stands as a testament to the power of strategic planning, meticulous implementation, and a commitment to excellence.
+Primastat's commitment to harnessing the power of open-source projects has proven to be a game-changer in creating value for our clients. 
+<br>By tapping into the vast ecosystem of open-source tools, we unlock a world of possibilities for customization and innovation. Our extensive knowledge 
+<br>of the tools available in the market allows us to build robust and tailored solutions that precisely align with our clients' unique needs. 
+<br>Open-source projects not only provide cost-effective alternatives but also foster collaboration and community-driven enhancements. 
+<br>At Primastat, we leverage this collective intelligence to deliver cutting-edge solutions, utilizing tools like Apache Superset to build 
+<br>in-house visualization tools and engineer database architectures compatible with heavy BI workloads. The result is a suite of custom systems
+<br> that not only meet but exceed our clients' expectations, creating lasting value through the fusion of open-source innovation and 
+<br>our expertise in crafting bespoke solutions.
+</p>
 <br>
-The establishment of a comprehensive BI system by Primastat not only streamlined DSquare's data processes but also elevated the organization to new heights of BI excellence. The fusion of a tailored ETL application and the visualization prowess of Apache Superset has empowered DSquare's teams with an intuitive and interactive platform for data exploration.
+<h2 class="caseStudy-subHeading" id="superset">
+    Apache Superset
+</h2><br>
+<p class="caseStudy-paragraph">
+Apache Superset stands as a dynamic and versatile open-source data exploration and visualization platform that has become a cornerstone in Primastat's commitment
+<br> to delivering powerful Business Intelligence solutions. Renowned for its flexibility and ease of use, Superset empowers organizations to turn complex datasets 
+<br>into interactive and visually compelling dashboards. Its user-friendly interface allows for seamless exploration of data, facilitating a comprehensive understanding 
+<br>of operations. One notable advantage is the ability to set up Superset on-premise, providing organizations with full control over their BI environment. 
+<br>This self-hosted capability ensures data security, compliance, and the ability to tailor the system to specific needs. The benefits of Apache Superset 
+<br>extend beyond its deployment flexibility; it offers a wide array of visualization options, supports a variety of data sources, and fosters collaboration 
+<br>through shared dashboards. In essence, Apache Superset emerges as a powerful tool in our arsenal, allowing us to deliver customized, effective, and visually 
+<br>compelling BI solutions for our clients.
+</p>
 <br>
-This synergy has not only translated into operational efficiency but has also instilled a data-driven culture within DSquare. The dynamic dashboards created through Apache Superset serve as windows into the heartbeat of DSquare's operations, providing key stakeholders with real-time insights into crucial performance indicators.
+<h2 class="caseStudy-subHeading" id="dsquare">
+    Crafting brilliance with Dsquare
+</h2><br>
+<p class="caseStudy-paragraph">
+The integration of Apache Superset and the custom ETL pipeline into Dsquare's infrastructure marked a transformative phase in their Business Intelligence capabilities. 
+<br>Collaborating with Primastat, the implementation focused on leveraging the robust components of Apache Superset to craft an in-house visualization tool that provided 
+<br>intuitive insights. The engineering of the existing database architecture ensured compatibility with heavy BI workloads, enhancing the scalability and efficiency of data processing. 
+<br>The deployment of ETL pipelines in pure Python showcased a commitment to streamlined data extraction, transformation, and loading processes. Further, the decision to house the data in 
+<br>MySQL for efficient data warehousing solidified the foundation for secure and scalable storage. Multiple dashboards, tailored for diverse user groups, including public-facing interfaces,
+<br>were crafted to provide targeted and actionable insights. This integration not only elevated Dsquare's BI capabilities but also exemplified the successful collaboration
+<br>between Primastat and Dsquare in delivering innovative and tailored solutions to meet their unique business needs.
+</p>
 <br>
-In conclusion, the marriage of BI logic, data visualization, and strategic implementation has not only decoded the complexity of data for DSquare but has also ushered in a new era of informed decision-making. The journey undertaken symbolizes not just a technological transformation but a cultural shift toward embracing the power of data in shaping the future. As DSquare charts its course forward, the collaborative efforts with Primastat serve as a beacon of BI excellence, illuminating the path toward sustained innovation and success.
+<h2 class="caseStudy-subHeading" id=collab>
+    Collaborate with Primastat
+</h2><br>
+<p class="caseStudy-paragraph">
+    Embark on a transformative journey by collaborating with Primastat to revolutionize your Business Intelligence landscape. Our expertise extends beyond mere implementation.
+    <br>We offer a comprehensive suite of services designed to meet your unique data needs.
+</p>
+<br>
+
+<ul class="caseStudy-paragraph">
+    <li>
+        <strong>Build Your In-House BI Systems:</strong>
+        Choose from a diverse array of cutting-edge tools and technologies to craft a bespoke in-house Business Intelligence system tailored to your organizational requirements. We specialize in leveraging open-source projects like Apache Superset, ensuring that your visualization tools are not just effective but also customizable to align with your specific business objectives.
+    </li>
+<br>
+    <li>
+        <strong>Enhance Your Existing Systems:</strong>
+        Already have a BI system in place? Collaborate with us to elevate its capabilities. Our seasoned professionals will work alongside your team to engineer and optimize your existing database architecture, ensuring compatibility with heavy BI workloads. Whether it's refining ETL pipelines or upgrading data warehousing solutions, we bring a wealth of experience to enhance the efficiency and scalability of your current systems.
+    </li>
+<br>
+    <li>
+        <strong>Consult with Us for Data Knowledge Advancement:</strong>
+        Unlock the full potential of your data through insightful consultations with our experts. Whether you are looking to refine your data strategies, improve analytics workflows, or implement advanced data science techniques, our consultancy services are designed to take your data knowledge to the next level. Together, we can navigate the intricacies of data management and empower your organization with the tools and insights needed to thrive in the data-driven era.
+    </li>
+</ul>
+<br>
+<p class="caseStudy-paragraph">
+    <strong>Connect with Primastat, and let's embark on a collaborative journey towards unleashing the true power of your data. 
+    <br>Whether you're building from the ground up, enhancing existing systems, or seeking strategic data guidance, our team is ready to partner with you for success.</strong>
 </p>
 </div>
   `;
@@ -86,27 +102,31 @@ In conclusion, the marriage of BI logic, data visualization, and strategic imple
 export const caseStudiesList: Array<CaseStudy> = [
   { caseStudyId:"cs-1",
     image: "/public/case-studies/cs1.png",
-    headerImg: "/public/case-studies/cs1_bg.svg",
+    headerImg: "/public/case-studies/cs1/bg.svg",
     message:
       "Primastat Transforms DSquare with Groundbreaking BI System",
     html: caseStudy1,
     route: "/caseStudy/cs-1",
     indexItems: [
       {
-        "name": "Understanding",
-        "id": "understanding"
+        "name": "Introduction",
+        "id": "intro"
       },
       {
-        "name": "Blueprint",
-        "id": "blueprint"
+        "name": "Power of open-source",
+        "id": "open-source"
       },
       {
-        "name": "Implementation",
-        "id": "implementation"
+        "name": "Superset",
+        "id": "superset"
       },
       {
-        "name": "Conclusion",
-        "id": "conclusion"
+        "name": "Crafting brilliance with Dsquare",
+        "id": "dsquare"
+      },
+      {
+        "name": "Collaborate with Primastat",
+        "id": "collab"
       }
     ],
   },

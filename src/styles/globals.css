@@ -73,3 +73,25 @@
 .caseStudy-paragraph {
   font-size: 1.2rem;
 }
+
+
+.caseStudy-image {
+  display: block;
+  margin: auto; /* Center the image */
+  max-width: 100%; /* Make sure the image doesn't exceed its natural size */
+}
+
+/* Responsive styling for different screen sizes */
+@media (min-width: 768px) {
+  /* Styles for desktop screens */
+  .caseStudy-image {
+      width: 50%; /* Adjust the width for desktop screens */
+  }
+}
+
+@media (max-width: 767px) {
+  /* Styles for mobile screens */
+  .caseStudy-image {
+      width: 80%; /* Adjust the width for mobile screens */
+  }
+}
