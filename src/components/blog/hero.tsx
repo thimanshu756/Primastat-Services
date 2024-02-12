@@ -1,7 +1,6 @@
 import React from "react";
 interface HeroProps {
   title: string;
-  img: string;
   headerImg: string;
 }
 const Hero: React.FC<HeroProps> = ({ title, headerImg }) => {
