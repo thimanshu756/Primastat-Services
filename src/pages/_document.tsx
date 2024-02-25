@@ -1,4 +1,10 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'PrimaStat',
+  description: 'Transforming data into insights'
+};
 
 export default function Document() {
   return (
