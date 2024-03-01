@@ -7,10 +7,16 @@ import Client from "../components/common/clientTestimonies";
 import CaseStudies from "../components/common/caseStudies";
 import ContactForm from "@/components/contactUs/form";
 import Calendly from "@/components/contactUs/calendly";
+import Head from "next/head";
 
 export const Landing = (): JSX.Element => {
   return (
     <div className="h-100vh w-100vw bg-[#F2F2F2]">
+      <Head>
+        <title>
+          Contact Us
+        </title>
+      </Head>
       <Navbar />
 
       <Hero />

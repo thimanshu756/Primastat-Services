@@ -11,7 +11,7 @@ import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import { caseStudiesList } from "@/data/caseStudiesList";
 import { clientList } from "@/data/clientTestimonies";
 import serviceDataList, { ServiceData } from "@/data/services";
-
+import Head from "next/head";
 import BreadCrumbs from "@/components/common/breadCrumbs";
 
 interface LandingProps {
@@ -21,6 +21,11 @@ interface LandingProps {
 const Landing: React.FC<LandingProps> = ({ serviceData }) => {
   return (
     <div className="h-100vh w-100vw bg-[#F2F2F2]">
+      <Head>
+        <title>
+          { serviceData.heroText }
+        </title>
+      </Head>
       <Navbar />
       <BreadCrumbs
         backgroundColor="bg-[#F2F2F2]"

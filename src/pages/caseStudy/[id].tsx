@@ -9,6 +9,7 @@ import Client from "../../components/common/clientTestimonies";
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import { clientList } from "@/data/clientTestimonies";
 import { caseStudiesList } from "@/data/caseStudiesList";
+import Head from "next/head";
 
 interface IndexItem {
   name: string;
@@ -26,6 +27,11 @@ interface LandingProps {
 const Landing: React.FC<LandingProps> = ({ htmlContent, indexItems ,title, headerImg}) => {
   return (
     <div className="h-100vh w-100vw bg-[#F2F2F2]">
+      <Head>
+        <title>
+          { title }
+        </title>
+      </Head>
       <Navbar />
       <Hero title={title} headerImg={headerImg} />
       <BlogHandler htmlContent={htmlContent} indexItems={indexItems} />

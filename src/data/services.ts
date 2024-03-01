@@ -61,6 +61,30 @@ const dataVisualization = {
   heroImage: "/public/services/dataVisualization/hero.png",
 
   serviceDetails: [
+    // {
+    //   image: "/public/services/dataVisualization/img1.png",
+    //   heading: "Business Intelligence Tool Integration",
+    //   description:
+    //     "Visualize, analyze and become more data driven by setting up an on-premise Business Intelligence tool",
+    //   details: [
+    //     {
+    //       icon: "/public/services/dataVisualization/logo-1.png",
+    //       text: "Apache Superset",
+    //     },
+    //     {
+    //       icon: "/public/services/dataVisualization/logo-2.png",
+    //       text: "Kibana",
+    //     },
+    //     {
+    //       icon: "/public/services/dataVisualization/logo-3.png",
+    //       text: "Grafana",
+    //     },
+    //     {
+    //       icon: "/public/services/dataVisualization/logo-4.png",
+    //       text: "Plotly Dash",
+    //     },
+    //   ],
+    // },
     {
       image: "/public/services/dataVisualization/img1.png",
       heading: "Business Intelligence Tool Integration",
@@ -68,19 +92,19 @@ const dataVisualization = {
         "Visualize, analyze and become more data driven by setting up an on-premise Business Intelligence tool",
       details: [
         {
-          icon: "/public/services/dataVisualization/logo-1.png",
+          icon: "",
           text: "Apache Superset",
         },
         {
-          icon: "/public/services/dataVisualization/logo-2.png",
+          icon: "",
           text: "Kibana",
         },
         {
-          icon: "/public/services/dataVisualization/logo-3.png",
+          icon: "",
           text: "Grafana",
         },
         {
-          icon: "/public/services/dataVisualization/logo-4.png",
+          icon: "",
           text: "Plotly Dash",
         },
       ],

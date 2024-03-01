@@ -10,6 +10,7 @@ import { caseStudiesList } from "@/data/caseStudiesList";
 import LogoCarousel from "@/components/common/logoCarousel";
 import { logos } from "@/data/toolsUsedCarousal";
 import Prisma from "@/components/home/prisma";
+import Head from "next/head";
 
 
 
@@ -17,6 +18,11 @@ import Prisma from "@/components/home/prisma";
 export const Landing = (): JSX.Element => {
   return (
     <div className="h-100vh w-100vw overflow-hidden bg-[#F2F2F2]">
+      <Head>
+        <title>
+          PrimaStat | Harness the knowledge in your data
+        </title>
+      </Head>
       <Navbar />
 
       <Hero />

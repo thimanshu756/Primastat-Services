@@ -11,10 +11,16 @@ import { caseStudiesList } from "@/data/caseStudiesList";
 import BreadCrumbs from "@/components/common/breadCrumbs";
 import { logos } from "@/data/clientCarousal";
 import Prisma from "@/components/home/prisma";
+import Head from "next/head";
 
 export const Landing = (): JSX.Element => {
   return (
     <div className="h-100vh w-100vw bg-[#F2F2F2]">
+      <Head>
+        <title>
+          About
+        </title>
+      </Head>
       <Navbar />
       <BreadCrumbs
         backgroundColor="bg-[#F2F2F2]"

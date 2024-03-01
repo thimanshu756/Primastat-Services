@@ -6,10 +6,16 @@ import Hero from "../components/case-studies/hero";
 import CaseStudies from "../components/common/caseStudies";
 import { caseStudiesList } from "@/data/caseStudiesList";
 import BreadCrumbs from "@/components/common/breadCrumbs";
+import Head from "next/head";
 
 const CaseStudy: React.FC = () => {
   return (
     <div className="h-100vh w-100vw bg-[#F2F2F2]">
+      <Head>
+        <title>
+          Contact Us
+        </title>
+      </Head>
       <Navbar />
       <BreadCrumbs
         backgroundColor="bg-[#F2F2F2]"
