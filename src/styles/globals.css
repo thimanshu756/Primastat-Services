@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.card {
+  width: 33.3%;
+  height: 480px;
+  opacity: 1;
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s, filter 0.3s ease-in-out;
+  filter: blur(0); /* Initially, no blur */
+}
+
+
+/* Apply the hover effects */
+.card.hovered {
+  width: 66.6%;
+  opacity: 1;
+}
+
+/* When any card is hovered, blur the non-hovered cards */
+.animation-container:hover .card:not(.hovered) {
+  filter: blur(2px);
+}
+
+.text-details {
+  display: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.text-details.hovered {
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  .animation-container {
+    /* Ensure a single column layout */
+  }
+
+  .card {
+    width: 100%; /* Full width for each card */
+    height: auto; /* Height adjusts to content */
+    filter: none; /* No blur effect */
+    transition: none; /* Disable transitions */
+  }
+
+  .text-details {
+    display: block; /* Always show text details */
+  }
+}
+
+.heading-1{
+  font-size:20px;
+  color:red
+}
+
+.caseStudy-heading {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 10px
+}
+
+.caseStudy-subHeading {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  margin-top: 8px;
+}
+
+.caseStudy-paragraph {
+  font-size: 1.2rem;
+}
+
+
+.caseStudy-image {
+  display: block;
+  margin: auto; /* Center the image */
+  max-width: 100%; /* Make sure the image doesn't exceed its natural size */
+}
+
+/* Responsive styling for different screen sizes */
+@media (min-width: 768px) {
+  /* Styles for desktop screens */
+  .caseStudy-image {
+      width: 50%; /* Adjust the width for desktop screens */
+  }
+}
+
+@media (max-width: 767px) {
+  /* Styles for mobile screens */
+  .caseStudy-image {
+      width: 80%; /* Adjust the width for mobile screens */
+  }
+}
