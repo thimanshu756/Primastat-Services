@@ -95,10 +95,10 @@ export default function Footer() {
               &copy; Primastat Services Pvt. Ltd.
             </p>
             <div className="flex space-x-4">
-              <Link href="/terms">
+              <Link href="https://legal.primastat.in">
                 <p className="text-gray-700 text-lg">Terms &amp; Conditions</p>
               </Link>
-              <Link href="/privacy">
+              <Link href="https://legal.primastat.in/policies/privacy-policy">
                 <p className="text-gray-700 text-lg">Privacy Policy</p>
               </Link>
               
