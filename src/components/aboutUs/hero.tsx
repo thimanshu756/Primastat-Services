@@ -1,7 +1,5 @@
 import Link from "next/link";
 import React from "react";
-//comment
-
 export default function Hero() {
   return (
     <div className="bg-[#F2F2F2] text-black font-['Roboto', 'Helvetica']">
