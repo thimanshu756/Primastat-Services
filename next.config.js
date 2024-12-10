@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     domains: ['c.animaapp.com'],
   },
-  output: 'standalone',
+  // output: 'standalone',
 }
 
 module.exports = nextConfig
